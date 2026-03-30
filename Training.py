@@ -5,11 +5,16 @@ def main():
 
     model.train(
         data="dataset.yaml",
-        epochs=200,
-        imgsz=1280,
+        epochs=300,
+        imgsz=960,
         batch=4,
         device=0,
-        workers=2
+        workers=2,
+        mosaic=1.0,
+        close_mosaic=20,
+        lr0=0.005,
+        patience=60,
+        optimizer="AdamW"
     )
 
 if __name__ == "__main__":

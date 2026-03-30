@@ -1,0 +1,27 @@
+### --- ZDJĘCIA (Twoje specyficzne wymaganie) ---
+*.jpg
+*.jpeg
+
+### --- SYSTEMOWE ---
+.DS_Store
+Thumbs.db
+desktop.ini
+
+### --- ŚRODOWISKA I SEKRETY ---
+.env
+.env.local
+*.log
+*.tmp
+
+### --- EDYTORZY (VS Code, IntelliJ) ---
+.vscode/
+.idea/
+*.swp
+
+### --- TYPOWE FOLDERY ZALEŻNOŚCI ---
+node_modules/
+__pycache__/
+bin/
+obj/
+dist/
+build/
