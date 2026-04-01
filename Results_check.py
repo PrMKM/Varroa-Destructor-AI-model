@@ -2,7 +2,7 @@ from ultralytics import YOLO
 
 model = YOLO("runs/detect/train/weights/best.pt")
 
-results = model("images/train/img1.jpg", save=True)
+results = model("images/train/img2.jpg", save=True)
 
 boxes = results[0].boxes
 
