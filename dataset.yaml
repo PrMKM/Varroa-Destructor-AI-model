@@ -1,6 +1,22 @@
-path: varroa_dataset
-train: images/train
-val: images/train
+# # path: varroa_dataset
+# # train: images/train
+# # val: images/train
 
-names:
-  0: Varroa
+# # names:
+# #   0: Varroa
+
+# path: varroa_dataset
+
+# train: images_sliced/train
+# val: images_sliced/train
+
+# names:
+#   0: Varroa
+
+path: D:/Studia/Semestr6/PSI/Repo modelu/datasets/varroa_dataset
+
+train: images_sliced/train
+val: images_sliced/train
+
+nc: 1
+names: ["Varroa"]
