@@ -5,15 +5,15 @@ def main():
 
     model.train(
         data="dataset.yaml",
-        epochs=250,
+        epochs=300,
         imgsz=960,
-        batch=4,
+        batch=6,
         device=0,
         workers=2,
         mosaic=1.0,
-        close_mosaic=20,
+        close_mosaic=10,
         lr0=0.005,
-        patience=60,
+        patience=80,
         optimizer="AdamW"
     )
 

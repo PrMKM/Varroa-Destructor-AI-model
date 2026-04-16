@@ -1,21 +1,29 @@
 from ultralytics import YOLO
+import os
 
 model = YOLO("runs/detect/train/weights/best.pt")
 
-results = model("images/train/img2.jpg", save=True)
+test_path = "images/test"
 
-boxes = results[0].boxes
+total_count = 0
 
-count = 0
+for img_name in os.listdir(test_path):
+    if img_name.endswith(".jpg"):
+        img_path = os.path.join(test_path, img_name)
 
-print("Liczba wykrytych Varroa:", len(boxes))
+        results = model(img_path, save=True)
 
-for i, box in enumerate(boxes):
-    print(i, float(box.conf))
+        boxes = results[0].boxes
 
-for box in boxes:
-    conf = float(box.conf)
-    if conf > 0.4:
-        count += 1
+        count = 0
 
-print("Liczba wykrytych Varroa:", count)
+        for box in boxes:
+            conf = float(box.conf)
+            if conf > 0.4:
+                count += 1
+
+        print(f"{img_name} → {count} Varroa")
+
+        total_count += count
+
+print("\nŁącznie wykryto Varroa:", total_count)
