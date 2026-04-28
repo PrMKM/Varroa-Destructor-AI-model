@@ -90,7 +90,7 @@ def slice_image(img, boxes, name):
                 ix2 = min(bx2, x2)
                 iy2 = min(by2, y2)
 
-                # jeśli brak przecięcia → skip
+                # jeśli brak przecięcia - skip
                 if ix1 >= ix2 or iy1 >= iy2:
                     continue
 
