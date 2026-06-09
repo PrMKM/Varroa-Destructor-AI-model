@@ -104,7 +104,7 @@ def slice_image(img, boxes, name):
 
                 cls, nx, ny, nw, nh = new_box
 
-                # KLUCZOWE: clamp + filtr śmieci
+                # clamp + filtr śmieci
                 if (
                     0 <= nx <= 1 and
                     0 <= ny <= 1 and
